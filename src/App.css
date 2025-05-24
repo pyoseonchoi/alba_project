@@ -1,0 +1,127 @@
+/* src/App.css */
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* 메뉴바 전체 스타일 */
+.navbar {
+  padding: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #ccc;
+  height: 70px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* 왼쪽 사이트 이름 */
+.navbar-left .logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-left: 30px;
+}
+
+/* 가운데 버튼들 */
+.navbar-center {
+  display: flex;
+  gap: 50px;
+  margin-right: 700px;
+}
+
+/* 오른쪽 로그인 버튼 */
+.navbar-right button,
+.navbar-center button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 30px;
+}
+
+.navbar-center button:hover,
+.navbar-right button:hover {
+  background-color: #f0f0f0;
+}
+
+.region-menu {
+  margin: 20px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.region-item {
+  padding: 10px 16px;
+  background-color: #eee;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.region-item:hover {
+  background-color: #ddd;
+}
+
+.form-container {
+  padding: 20px 40px;
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  margin-left : 300px;
+  width: 400px;
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  
+}
+
+.form-container input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.form-container button {
+  padding: 12px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #0056b3;
+}
+
+
