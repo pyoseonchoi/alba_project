@@ -1,0 +1,36 @@
+/* src/components/Navbar.css */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* 좌우 끝 정렬 */
+  border-bottom: 2px solid #000; /* 맨 위 줄 */
+  padding: 0 20px;
+  height: 60px;
+  background-color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.navbar-left {
+  flex: 1;
+}
+
+.navbar-center {
+  flex: 1;
+  display: flex;
+  gap: 15px;
+  justify-content: center; /* 중앙 정렬 */
+}
+
+.navbar-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; /* 오른쪽 정렬 */
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 900;
+  cursor: pointer;
+}

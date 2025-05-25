@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
 import "./App.css";
 import AlbaForm from './components/AlbaForm';
+import RegionPage from './pages/RegionPage'; // 🔹 추가
 
-function App() {
+function Home() {
   const [showRegions, setShowRegions] = useState(false);
   const [showForm, setShowForm] = useState(false); // 🔹 폼 보이기 상태
+  const navigate = useNavigate();
 
   const regions = ["서울", "경기도", "강원도", "충청도", "경상도", "전라도", "제주"];
 
@@ -27,7 +30,11 @@ function App() {
       {showRegions && (
         <div className="region-menu">
           {regions.map((region) => (
-            <div key={region} className="region-item">
+            <div
+              key={region}
+              className="region-item"
+              onClick={() => navigate(`/region/${region}`)}
+            >
               {region}
             </div>
           ))}
@@ -37,6 +44,17 @@ function App() {
       {/* 알바 등록 폼 */}
       {showForm && <AlbaForm onClose={() => setShowForm(false)} />}
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/region/:region" element={<RegionPage />} />
+      </Routes>
+    </Router>
   );
 }
 

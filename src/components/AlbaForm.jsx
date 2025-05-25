@@ -10,6 +10,7 @@ function AlbaForm({ onClose }) {
     location: "",
     wage: "",
     time: "",
+    phone_num: "",
   });
 
   const handleChange = (e) => {
@@ -38,6 +39,7 @@ function AlbaForm({ onClose }) {
         <input name="location" type="text" placeholder="상세 위치 (예: 강남구)" onChange={handleChange} required />
         <input name="wage" type="number" placeholder="시급 (숫자만 입력)" onChange={handleChange} required />
         <input name="time" type="text" placeholder="근무 시간 (예: 10:00~18:00)" onChange={handleChange} required />
+         <input name="phone_num" type="text" placeholder="전화번호 (예: 010-xxxx-xxxx)" onChange={handleChange} required />
         <button type="submit">등록</button>
         <button type="button" onClick={onClose}>닫기</button>
       </form>

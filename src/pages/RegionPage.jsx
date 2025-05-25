@@ -1,0 +1,57 @@
+// src/pages/RegionPage.jsx
+import React, { useEffect, useState } from "react";
+import { collection, query, where, getDocs } from "firebase/firestore";
+import { useParams, useNavigate } from "react-router-dom";
+import db from "../firebase";
+import "../App.css"; // 기존 navbar 스타일 그대로 사용
+
+function RegionPage() {
+  const { region } = useParams();
+  const [albaList, setAlbaList] = useState([]);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchAlbaData = async () => {
+      const q = query(collection(db, "albaPosts"), where("region", "==", region));
+      const querySnapshot = await getDocs(q);
+      const data = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+      setAlbaList(data);
+    };
+
+    fetchAlbaData();
+  }, [region]);
+
+  return (
+    <div className="app">
+      {/* 기존 네비게이션 바 복붙 */}
+      <nav className="navbar">
+        <div className="navbar-left">
+          <div className="logo">알바모아</div>
+        </div>
+        <div className="navbar-right">
+          <button onClick={() => navigate("/")}>홈으로</button>
+        </div>
+        
+      </nav>
+
+      <div style={{ padding: "20px 40px" }}>
+        <h2>{region} 지역 알바 목록</h2>
+        {albaList.length === 0 ? (
+          <p>등록된 알바가 없습니다.</p>
+        ) : (
+          albaList.map((alba) => (
+            <div key={alba.id} style={{ border: "1px solid #ccc", padding: "12px", margin: "10px 0", borderRadius: "8px" }}>
+              <h3>{alba.name}</h3>
+              <p>위치: {alba.location}</p>
+              <p>시급: {alba.wage}원</p>
+              <p>시간: {alba.time}</p>
+              <p>전화번호: {alba.phone_num}</p>
+            </div>
+          ))
+        )}
+      </div>
+    </div>
+  );
+}
+
+export default RegionPage;
