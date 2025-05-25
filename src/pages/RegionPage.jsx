@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import { useParams, useNavigate } from "react-router-dom";
 import db from "../firebase";
-import "../App.css"; // 기존 navbar 스타일 그대로 사용
+import "../App.css"; 
 
 function RegionPage() {
   const { region } = useParams();
@@ -23,10 +23,10 @@ function RegionPage() {
 
   return (
     <div className="app">
-      {/* 기존 네비게이션 바 복붙 */}
+      {}
       <nav className="navbar">
         <div className="navbar-left">
-          <div className="logo">알바모아</div>
+          <div className="logo">장년일터</div>
         </div>
         <div className="navbar-right">
           <button onClick={() => navigate("/")}>홈으로</button>

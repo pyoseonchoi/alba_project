@@ -32,7 +32,7 @@ function AlbaForm({ onClose }) {
 
   return (
     <div className="form-container">
-      <h2>알바 모집 등록</h2>
+      <h2>공고 등록</h2>
       <form onSubmit={handleSubmit}>
         <input name="name" type="text" placeholder="업체명" onChange={handleChange} required />
         <input name="region" type="text" placeholder="지역 (예: 서울)" onChange={handleChange} required />
