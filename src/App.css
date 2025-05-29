@@ -214,3 +214,45 @@ html, body, #root {
   margin-right: 10px;
   width: 350px;
 }
+
+/* 최근 등록된 알바 공고 섹션 */
+.recent-jobs-section {
+  width: 50%; /* 좌측 절반 공간만 차지 */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.job-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2열 */
+  grid-gap: 20px;
+}
+
+.job-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.job-card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.job-card h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.job-card p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+  color: #333;
+}

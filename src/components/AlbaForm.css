@@ -1,0 +1,35 @@
+/* AlbaForm.css */
+
+.styled-select {
+  appearance: none; /* 기본 화살표 제거 (크롬, 사파리) */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px 40px 10px 15px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  width: 100%;
+  max-width: 300px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* 화살표 아이콘 커스텀 (select 화살표 우측 끝에 표시) */
+.styled-select {
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%23333' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+}
+
+/* 포커스시 */
+.styled-select:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.6);
+}
