@@ -217,9 +217,11 @@ html, body, #root {
 
 /* 최근 등록된 알바 공고 섹션 */
 .recent-jobs-section {
+  margin-top : 30px;
   width: 50%; /* 좌측 절반 공간만 차지 */
   padding: 10px;
   box-sizing: border-box;
+  margin-bottom: 70px
 }
 
 .section-title {
@@ -232,6 +234,8 @@ html, body, #root {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2열 */
   grid-gap: 20px;
+  border-right: 2px solid #ccc;
+  padding-right: 16px;
 }
 
 .job-card {
@@ -255,4 +259,27 @@ html, body, #root {
   margin: 4px 0;
   font-size: 0.95rem;
   color: #333;
+}
+
+.info-links {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 16px;
+}
+
+.info-links li {
+  margin-bottom: 16px; /* 링크 간 간격 */
+}
+
+.info-links a {
+  text-decoration: none;
+  color: #1a73e8;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.info-links a:hover {
+  color: #0b53c1;
+  text-decoration: underline;
 }

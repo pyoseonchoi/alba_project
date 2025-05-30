@@ -14,7 +14,7 @@ function Home() {
 
   const regions = ["서울", "경기도", "강원도", "충청도", "경상도", "전라도", "제주"];
 
-  // 🔧 useEffect는 컴포넌트 안에 위치해야 함
+
   useEffect(() => {
     const fetchJobs = async () => {
       try {
@@ -32,7 +32,7 @@ function Home() {
 
   return (
     <div className="app">
-      {/* ✅ 이 부분이 '맨 위 바(navbar)' */}
+      {}
       <nav className="navbar">
         <div className="navbar-left">
           <div className="logo">장년일터</div>
@@ -62,24 +62,59 @@ function Home() {
         {showForm && <AlbaForm onClose={() => setShowForm(false)} />}
         {showResume && <ResumeForm onClose={() => setShowResume(false)} />}
 
-        <div className="recent-jobs-section">
-          <h2 className="section-title">최근 등록된 알바</h2>
-          <div className="job-grid">
-            {recentJobs.length > 0 ? (
-              recentJobs.map((job) => (
-                <div key={job.id} className="job-card">
-                  <h3>{job.name}</h3>
-                  <p>📍 위치: {job.location}</p>
-                  <p>💰 시급: {job.wage}</p>
-                  <p>⏰ 시간: {job.time}</p>
-                </div>
-              ))
-            ) : (
-              <p>최근 등록된 알바가 없습니다.</p>
-            )}
+        <div className="recent-jobs-section" style={{ display: "flex", width: "100%" }}>
+          {/* 왼쪽: 최근 공고 */}
+          <div style={{ width: "50%", paddingRight: "16px" }}>
+            <h2 className="section-title">최근 등록된 알바</h2>
+            <div className="job-grid">
+              {recentJobs.length > 0 ? (
+                recentJobs.map((job) => (
+                  <div key={job.id} className="job-card">
+                    <h3>{job.name}</h3>
+                    <p>📍 위치: {job.location}</p>
+                    <p>💰 시급: {job.wage}</p>
+                    <p>⏰ 시간: {job.time}</p>
+                  </div>
+                ))
+              ) : (
+                <p>최근 등록된 알바가 없습니다.</p>
+              )}
+            </div>
+          </div>
+
+          {}
+          <div style={{ width: "50%",  paddingLeft: "16px" }}>
+            <h2>정부 지원 사업</h2>
+           <ul className="info-links">
+              <li>
+                <a href="https://www.kordi.or.kr" target="_blank" rel="noopener noreferrer">
+                  한국노인인력개발원
+                </a>
+              </li>
+              <li>
+                <a href="https://www.work24.go.kr/cm/main.do?topArea=EBM01" target="_blank" rel="noopener noreferrer">
+                  고용24 - 취업특강, 직업훈련 서비스 제공
+                </a>
+              </li>
+              <li>
+                <a href="https://www.seniorro.or.kr:4431/" target="_blank" rel="noopener noreferrer">
+                  노인일자리여기
+                </a>
+              </li>
+            </ul>
+            <h2>소식들</h2>
+            
+            
+            
           </div>
         </div>
+
+
+
+        
       </main>
+
+      
 
       <div className="ad-section">
         <div className="ad-header">

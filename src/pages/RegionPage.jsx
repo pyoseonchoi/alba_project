@@ -35,9 +35,9 @@ function RegionPage() {
       </nav>
 
       <div style={{ padding: "20px 40px" }}>
-        <h2>{region} 지역 알바 목록</h2>
+        <h2>{region} 지역 일자리 목록</h2>
         {albaList.length === 0 ? (
-          <p>등록된 알바가 없습니다.</p>
+          <p>등록된 공고가 없습니다.</p>
         ) : (
           albaList.map((alba) => (
             <div key={alba.id} style={{ border: "1px solid #ccc", padding: "12px", margin: "10px 0", borderRadius: "8px" }}>
