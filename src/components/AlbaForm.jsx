@@ -1,4 +1,3 @@
-// src/components/AlbaForm.jsx
 import "./AlbaForm.css";
 import React, { useState } from "react";
 import { addDoc, collection } from "firebase/firestore";
@@ -32,7 +31,7 @@ function AlbaForm({ onClose }) {
         createdAt: new Date(),
       });
       alert("알바 공고가 등록되었습니다!");
-      onClose(); // 폼 닫기
+      onClose(); 
     } catch (error) {
       console.error("등록 실패:", error);
       alert("등록 중 오류가 발생했습니다.");

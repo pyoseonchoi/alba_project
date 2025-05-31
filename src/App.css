@@ -1,5 +1,3 @@
-/* src/App.css */
-
 * {
   box-sizing: border-box;
 }
@@ -17,7 +15,6 @@ html, body, #root {
   min-height: 100vh;
 }
 
-/* 메뉴바 전체 스타일 */
 .navbar {
   display: flex;
   flex-wrap: wrap;
@@ -25,36 +22,32 @@ html, body, #root {
   align-items: center;
   padding: 10px 20px;
   background-color: #f8f9fa;
-  border-bottom: 2px solid #ccc;  /* 줄 유지 */
+  border-bottom: 2px solid #ccc;  
   height: 70px;
   position: sticky;
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   min-height: 70px;
-  height: auto; /* 고정 높이 대신 auto */
+  height: auto; 
   padding: 10px 20px;
   border-bottom: 2px solid #ccc;
-  /* 나머지 스타일 그대로 */
 }
 
 
-
-/* 왼쪽 사이트 이름 */
 .navbar-left .logo {
   font-size: 1.6rem;
   font-weight: bold;
   margin-left: 30px;
 }
 
-/* 가운데 버튼들 */
 .navbar-center {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
   margin: 10px 0;
   justify-content: center;
-  flex: 1; /* 공간 꽉 채우기 */
+  flex: 1; 
   margin-right: 300px;
 }
 
@@ -72,7 +65,7 @@ html, body, #root {
   border: 1px solid #ccc;
   border-radius: 6px;
   cursor: pointer;
-  min-width: 90px; /* 최소 너비 */
+  min-width: 90px; 
 }
 
 
@@ -146,11 +139,11 @@ html, body, #root {
 .app {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* 화면 전체 높이를 채우게 함 */
+  min-height: 100vh; 
 }
 
 .main-content {
-  flex: 1; /* 중앙 콘텐츠가 남는 공간을 차지하게 함 */
+  flex: 1; 
 }
 
 .ad-section {
@@ -215,10 +208,9 @@ html, body, #root {
   width: 350px;
 }
 
-/* 최근 등록된 알바 공고 섹션 */
 .recent-jobs-section {
   margin-top : 30px;
-  width: 50%; /* 좌측 절반 공간만 차지 */
+  width: 50%;
   padding: 10px;
   box-sizing: border-box;
   margin-bottom: 70px
@@ -232,7 +224,7 @@ html, body, #root {
 
 .job-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2열 */
+  grid-template-columns: repeat(2, 1fr); 
   grid-gap: 20px;
   border-right: 2px solid #ccc;
   padding-right: 16px;
@@ -268,7 +260,7 @@ html, body, #root {
 }
 
 .info-links li {
-  margin-bottom: 16px; /* 링크 간 간격 */
+  margin-bottom: 16px; 
 }
 
 .info-links a {
@@ -282,4 +274,25 @@ html, body, #root {
 .info-links a:hover {
   color: #0b53c1;
   text-decoration: underline;
+}
+
+.community-box {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 12px;
+  height: 120px; 
+  overflow-y: auto;
+  background-color: #f9f9f9;
+}
+
+.community-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

@@ -1,4 +1,3 @@
-// src/pages/RegionPage.jsx
 import React, { useEffect, useState } from "react";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import { useParams, useNavigate } from "react-router-dom";
@@ -41,7 +40,10 @@ function RegionPage() {
         ) : (
           albaList.map((alba) => (
             <div key={alba.id} style={{ border: "1px solid #ccc", padding: "12px", margin: "10px 0", borderRadius: "8px" }}>
-              <h3>{alba.name}</h3>
+              <div className ="list-header">
+                <h3>{alba.name}</h3>
+                <button className="apply-button">신청하기</button>
+              </div>
               <p>위치: {alba.location}</p>
               <p>시급: {alba.wage}원</p>
               <p>시간: {alba.time}</p>

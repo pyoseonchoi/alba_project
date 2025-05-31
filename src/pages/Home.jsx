@@ -63,21 +63,25 @@ function Home() {
         {showResume && <ResumeForm onClose={() => setShowResume(false)} />}
 
         <div className="recent-jobs-section" style={{ display: "flex", width: "100%" }}>
-          {/* 왼쪽: 최근 공고 */}
           <div style={{ width: "50%", paddingRight: "16px" }}>
-            <h2 className="section-title">최근 등록된 알바</h2>
+            <h2 className="section-title">최근 등록된 공고</h2>
             <div className="job-grid">
               {recentJobs.length > 0 ? (
                 recentJobs.map((job) => (
-                  <div key={job.id} className="job-card">
+                  <div
+                    key={job.id}
+                    className="job-card"
+                    onClick={() => navigate(`/region/${job.region}`)}
+                    style={{ cursor: "pointer" }}
+                  >
                     <h3>{job.name}</h3>
-                    <p>📍 위치: {job.location}</p>
+                    <p>📍 위치: {job.region}</p>
                     <p>💰 시급: {job.wage}</p>
                     <p>⏰ 시간: {job.time}</p>
                   </div>
                 ))
               ) : (
-                <p>최근 등록된 알바가 없습니다.</p>
+                <p>최근 등록된 공고고가 없습니다.</p>
               )}
             </div>
           </div>
@@ -102,19 +106,18 @@ function Home() {
                 </a>
               </li>
             </ul>
-            <h2>소식들</h2>
-            
-            
-            
+            <div className ="community-header">
+            <h2>커뮤니티</h2>
+            <button className="apply-button">글쓰기</button>
+            </div>
+            <div className = "community-box">
+              <ul>
+              </ul>
+            </div>    
           </div>
         </div>
 
-
-
-        
       </main>
-
-      
 
       <div className="ad-section">
         <div className="ad-header">

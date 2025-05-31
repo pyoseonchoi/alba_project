@@ -1,4 +1,3 @@
-// src/components/ResumeForm.jsx
 import React, { useState } from "react";
 
 function ResumeForm({ onClose }) {
@@ -18,7 +17,7 @@ function ResumeForm({ onClose }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert("이력서 저장 기능은 로그인 후 제공됩니다.");
-    onClose(); // 닫기만 실행
+    onClose();
   };
 
   return (
